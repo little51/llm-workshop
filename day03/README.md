@@ -7,7 +7,7 @@
 conda create -n day03 python=3.12 -y
 # 2、激活虚拟环境
 conda activate day03
-# 3、安装PyTorch
+# 3、安装Xinference
 pip install xinference[all]==1.13.0 gradio==5.49.1 -i https://pypi.mirrors.ustc.edu.cn/simple
 # 4、校验PyTorch是否正确安装
 python -c "import torch; print(torch.cuda.is_available())"
