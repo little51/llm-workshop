@@ -94,3 +94,16 @@ https://github.com/git-for-windows/git/releases/download/v2.52.0.windows.1/Git-2
 git --version
 ```
 
+## 五、综合练习
+
+```powershell
+# 1、创建虚拟环境
+conda create -n day02 python=3.12 -y
+# 2、激活虚拟环境
+conda activate day02
+# 3、安装PyTorch
+pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu124
+# 4、验证是否安装成功
+python helloworld.py
+```
+
