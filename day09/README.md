@@ -1,12 +1,12 @@
-#   第8天 大模型SFT训练（一）
+#   第9天 大模型SFT训练（二）
 
 ## 一、环境建立
 
-```shell
+```powershell
 # 创建虚拟环境
-conda create -n day08 python=3.12 -y
+conda create -n day09 python=3.12 -y
 # 激活虚拟环境
-conda activate day08
+conda activate day09
 # 安装依赖库
 pip install trl==0.25.1 transformers==4.57.3 peft==0.18.0 datasets==4.4.1 torch -i https://pypi.mirrors.ustc.edu.cn/simple
 # 重装Pytorch(Windows)
@@ -34,6 +34,13 @@ python model_download2.py --repo_id Qwen/Qwen3-0.6B
 
 ## 三、微调过程
 
-```shell
-python train_complete.py
+```powershell
+python train_chatml.py
 ```
+
+## 四、验证微调模型
+
+```powershell
+python ft_chat_demo.py
+```
+
