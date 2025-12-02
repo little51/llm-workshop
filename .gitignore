@@ -209,3 +209,5 @@ __marimo__/
 /day06/vllm-0.8.5+cu124-cp312-cp312-win_amd64.whl
 /day06/models
 /day08/models
+/day11/datasets
+/day11/models
