@@ -211,3 +211,5 @@ __marimo__/
 /day08/models
 /day11/datasets
 /day11/models
+/day06/*.whl
+/day13/echomimic_v2
