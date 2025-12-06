@@ -53,13 +53,13 @@ model = get_peft_model(model, lora_config)
 model.gradient_checkpointing_enable()
 
 # 4. 加载和预处理数据集
-dataset = load_dataset("my_datasets/SylvanL/Traditional-Chinese-Medicine-Dataset-SFT")
+dataset = load_dataset("my_datasets/michaelwzhu/ShenNong_TCM_Dataset")
 
 def format_dataset(example):
     """将数据转换为Qwen3的对话格式"""
     messages = [
-        {"role": "user", "content": example["input"]},
-        {"role": "assistant", "content": example["output"]},
+        {"role": "user", "content": example["query"]},
+        {"role": "assistant", "content": example["response"]},
     ]
     
     text = tokenizer.apply_chat_template(

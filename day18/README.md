@@ -25,7 +25,7 @@ python model_download2.py --repo_id Qwen/Qwen3-1.7B
 
 ```powershell
 # 下载
-python model_download2.py --repo_type dataset --repo_id SylvanL/Traditional-Chinese-Medicine-Dataset-SFT
+python model_download2.py --repo_type dataset --repo_id michaelwzhu/ShenNong_TCM_Dataset
 # 目录改名（避免目录名与datasets库冲突）
 rename datasets my_datasets
 ```
