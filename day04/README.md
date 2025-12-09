@@ -1,4 +1,4 @@
-# 第4天 大模型部署（二）
+# 第4天 交互式Web应用
 
 ## 一、C++编译环境安装
 
@@ -7,7 +7,7 @@
 https://visualstudio.microsoft.com/zh-hans/visual-cpp-build-tools/
 ```
 
-## 二、Open WebUI安装
+## 二、Open-WebUI安装
 
 ```powershell
 # 1、创建虚拟环境
@@ -31,10 +31,11 @@ http://localhost:8080
 ```powershell
 # 另开命令行窗口
 set XINFERENCE_DISABLE_HEALTH_CHECK=1
+set XINFERENCE_HEALTH_CHECK_INTERVAL=300
 # 激活虚拟环境
 conda activate day03
 # 运行
-xinference-local
+xinference-local --host 127.0.0.1 --port 9997
 # 访问
 http://127.0.0.1:9997
 ```
@@ -46,12 +47,11 @@ http://127.0.0.1:9997
 # 修改OpenAI连接参数
 ```
 
-## 五、Open WebUI应用
+## 五、Open-WebUI应用
 
 ```powershell
 # 对话
 # 上传文件
 # 联网搜索
-# 知识库
 ```
 

@@ -1,4 +1,4 @@
-# 第3天 大模型部署（一）
+# 第3天 基础模型本地部署
 
 ## 一、安装Xinference
 
@@ -22,8 +22,11 @@ python -c "import torch; print(torch.cuda.is_available())"
 ```powershell
 # 激活虚拟环境
 conda activate day03
+# 禁用健康检查（（否则在Windows上会出现RuntimeError: Cluster is not available after multiple attempts错误））
+set XINFERENCE_DISABLE_HEALTH_CHECK=1
+set XINFERENCE_HEALTH_CHECK_INTERVAL=300
 # 运行
-xinference-local
+xinference-local --host 127.0.0.1 --port 9997
 # 访问
 http://127.0.0.1:9997
 ```
@@ -52,7 +55,7 @@ xinference launch --model-name qwen3 --model-type LLM --model-engine Transformer
 http://127.0.0.1:9997/qwen3/
 ```
 
-## 四、最简ChatBot
+## 四、最简ChatBot开发
 
 ```powershell
 # 1、再开另一个命令窗口
@@ -66,12 +69,3 @@ python chatbot.py
 http://localhost:7860
 ```
 
-### 思考题：
-
-1、让本机以外的机器访问ChatBot该如何写？
-
-2、如果更换模型该如何改？
-
-3、多轮会话是如何实现的？
-
-4、提示词越来越长该如何解决？
