@@ -20,8 +20,6 @@ conversations = [
 ]
 
 # ChatML格式
-
-
 def format_chatml(conversation):
     formatted_text = ""
     for message in conversation['messages']:
