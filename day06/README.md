@@ -1,4 +1,4 @@
-# 第6天 大模型部署（三）
+# 第6天 大模型企业级部署技术
 
 ## 一、建立虚拟环境
 
@@ -45,7 +45,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 # 获取下载脚本
 https://aliendao.cn/model_download2.py
 # 下载模型权重
-python model_download2.py --repo_id DeepSeek-R1-Distill-Qwen-1.5B
+python model_download2.py --repo_id deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B
 ```
 
 ## 五、运行模型服务
@@ -53,8 +53,8 @@ python model_download2.py --repo_id DeepSeek-R1-Distill-Qwen-1.5B
 ```powershell
 # 禁用TORCHDYNAMO_DISABLE
 set TORCHDYNAMO_DISABLE=1
-# 起动vLLM服务
-vllm serve ./models/DeepSeek-R1-Distill-Qwen-1.5B --served-model-name=deepseek --dtype=half --gpu_memory_utilization=0.7 --max_model_len=1024
+# 启动vLLM服务
+vllm serve ./models/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B --served-model-name=deepseek --dtype=half --gpu_memory_utilization=0.8 --max_model_len=1024
 ```
 
 ## 六、测试vLLM服务
