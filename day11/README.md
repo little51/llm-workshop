@@ -24,9 +24,9 @@ python model_download2.py --repo_type dataset --repo_id AI-MO/NuminaMath-TIR
 python model_download2.py --repo_id Qwen/Qwen2.5-Math-1.5B-Instruct
 ```
 
-## 三、数据蒸馏
+## 三、数据蒸馏过程
 
-```shell
+```powershell
 python data_distill.py
 # 结果保存在distilled_data.jsonl
 ```

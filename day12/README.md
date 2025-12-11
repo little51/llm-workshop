@@ -26,7 +26,7 @@ python model_download2.py --repo_id SWivid/F5-TTS_Emilia-ZH-EN
 python model_download2.py --repo_id openai/whisper-large-v3-turbo
 ```
 
-## 三、运行WebUI
+## 三、运行F5-TTS测试程序
 
 ```powershell
 python f5tts_demo.py

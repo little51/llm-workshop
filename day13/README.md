@@ -32,7 +32,7 @@ python model_download2.py --repo_id 2Noise/ChatTTS
 https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-7.1.1-essentials_build.zip
 ```
 
-## 三、运行
+## 三、运行示例
 
 ```powershell
 # 设置ffmpeg路径

@@ -1,4 +1,4 @@
-# 第14天 智能体应用（一）
+# 第14天 最简智能体应用开发
 
 ## 一、任务说明
 
@@ -21,7 +21,7 @@ pip install google-adk==1.20.0 litellm==1.80.7 -i https://pypi.mirrors.ustc.edu.
 ollama pull qwen3
 ```
 
-## 四、运行
+## 四、运行Agent
 
 ```powershell
 adk web --port 8000

@@ -33,14 +33,14 @@ rename datasets my_datasets
 ## 四、测试原始模型
 
 ```powershell
-# 起启API Server
+# 启动API Server
 python api_server.py --model-name models/Qwen/Qwen3-1.7B
 # 开启WebUI测试（另开窗口）
 conda activate day18
 python med_chat.py
 ```
 
-## 五、训练
+## 五、模型训练
 
 ```shell
 # 激活虚拟环境
@@ -55,7 +55,9 @@ python med_train_trl.py
 ```powershell
 # 激活虚拟环境
 conda activate day18
-# 开启WebUI测试
+python api_server.py --model-name 模型训练检查点文件夹
+# 开启WebUI测试（另开窗口）
+conda activate day18
 python med_chat.py
 ```
 

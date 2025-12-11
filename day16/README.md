@@ -1,6 +1,6 @@
-# 第16天 大模型企业应用
+# 第16天 大模型企业落地应用
 
-## 一、Langflow应用
+## 一、Langflow安装
 
 ### 1、环境建立
 
@@ -13,7 +13,7 @@ conda activate day16
 pip install langflow==1.5.1 fastapi==0.116.1 docling-core[chunking]==2.54.0 -i https://pypi.mirrors.ustc.edu.cn/simple
 ```
 
-### 2、运行Langflow应用
+### 2、运行Langflow
 
 ```powershell
 # 设置大模型基地址
@@ -24,7 +24,13 @@ langflow run
 http://127.0.0.1:7860
 ```
 
-## 二、Dify应用
+### 3、模型准备
+
+```powershell
+ollama cp qwen3 gpt-4o-mini
+```
+
+## 二、Dify安装
 
 ### 1、确认Windows版本
 
@@ -51,7 +57,7 @@ https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe?utm_s
 # 3、安装完成后重启计算机
 # 4、运行“Docker Desktop”
 ```
-### 4、更新WSL
+### 4、更新WSL2
 
 ```powershell
 # WSL(Windows Subsystem for Linux，在Windows系统中直接运行完整的Linux环境）
@@ -110,6 +116,12 @@ git clone https://github.com/langgenius/dify
 cd dify
 # 检出历史版本
 git checkout 36b221b
+# 修改配置文件
+  ## 将.example改名为.env
+  ## 修改以下内容
+PIP_MIRROR_URL=https://pypi.tuna.tsinghua.edu.cn/simple
+# PIP_MIRROR_URL=
+
 ```
 
 ### 7、运行Dify服务
@@ -120,3 +132,13 @@ cd docker
 # 起动服务
 docker compose up -d
 ```
+
+### 8、模型准备
+
+```powershell
+# 拉取推理模型
+ollama pull deepseek-r1:1.5b
+# 拉取嵌入模型
+ollama pull bge-m3
+```
+
