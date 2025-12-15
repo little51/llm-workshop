@@ -205,3 +205,10 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+/day04/.webui_secret_key
+/day04/tools
+/day06/triton-3.0.0-cp312-cp312-win_amd64.whl
+/day06/vllm-0.10.2+cu124-cp312-cp312-win_amd64.whl
+/tools
+/大模型应用与开发实验教程.docx
+/day02/images/*.bkp
