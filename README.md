@@ -1,5 +1,7 @@
 # 大模型应用与开发实验教程
 
+[电子书下载](https://github.com/little51/llm-workshop/blob/main/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E4%B8%8E%E5%BC%80%E5%8F%91%E5%AE%9E%E9%AA%8C%E6%95%99%E7%A8%8B.pdf)
+
 ## 一、课程概览
 
 | 天数   | 主题                 | 内容详情                             |
