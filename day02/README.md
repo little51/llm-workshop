@@ -94,7 +94,7 @@ https://github.com/git-for-windows/git/releases/download/v2.52.0.windows.1/Git-2
 git --version
 ```
 
-## 五、综合练习
+## 五、验证实验环境
 
 ```powershell
 # 1、创建虚拟环境
@@ -107,3 +107,40 @@ pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 --index-url https
 python helloworld.py
 ```
 
+## 六、综合练习
+
+### 1、安装 Transformers库
+
+```shell
+pip install transformers==4.57.3 accelerate==1.12.0 -i https://pypi.mirrors.ustc.edu.cn/simple
+```
+
+### 2、下载模型
+
+```shell
+# 获取下载脚本
+https://aliendao.cn/model_download2.py
+# 下载模型权重
+python model_download2.py --repo_id Qwen/Qwen3-0.6B
+```
+
+**扩展知识（常见模型下载地址）：**
+
+```shell
+# 1、异型岛开源社区
+https://aliendao.cn/models/Qwen/Qwen3-0.6B
+# 2、阿里魔搭社区
+https://www.modelscope.cn/models/Qwen/Qwen3-0.6B
+# 3、抱脸
+https://huggingface.co/Qwen/Qwen3-0.6B
+# 4、抱脸的镜像
+https://hf-mirror.com/Qwen/Qwen3-0.6B
+```
+
+### 3、运行例程
+
+```shell
+python llm_base.py
+```
+
+思考题：如何改成交互式？
