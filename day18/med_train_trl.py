@@ -110,3 +110,51 @@ trainer.train()
 
 # 9. 保存模型
 trainer.save_model("./qwen3_tcm_finetuned_standard")
+
+# 在训练完成后添加以下代码
+import matplotlib.pyplot as plt
+import json
+import os
+
+def plot_training_loss(log_history, output_dir="./loss_plots"):
+    """从训练历史中绘制Loss曲线"""
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # 提取loss数据
+    steps = []
+    losses = []
+    
+    for log in trainer.state.log_history:
+        if "loss" in log:
+            steps.append(log.get("step", 0))
+            losses.append(log["loss"])
+    
+    if not losses:
+        print("没有找到loss数据")
+        return
+    
+    # 绘制图表
+    plt.figure(figsize=(10, 6))
+    plt.plot(steps, losses, 'b-', linewidth=2)
+    plt.xlabel('Training Steps')
+    plt.ylabel('Loss')
+    plt.title('Training Loss Curve')
+    plt.grid(True, alpha=0.3)
+    
+    # 保存图片
+    plot_path = os.path.join(output_dir, "training_loss.png")
+    plt.savefig(plot_path, dpi=150, bbox_inches='tight')
+    plt.show()
+    
+    # 保存数据到文件
+    data = {
+        "steps": steps,
+        "losses": losses
+    }
+    with open(os.path.join(output_dir, "loss_data.json"), "w") as f:
+        json.dump(data, f, indent=2)
+    
+    print(f"Loss曲线已保存到: {plot_path}")
+    print(f"Loss数据已保存到: {os.path.join(output_dir, 'loss_data.json')}")
+
+plot_training_loss(trainer.state.log_history, output_dir="./loss_plots")

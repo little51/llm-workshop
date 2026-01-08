@@ -45,6 +45,8 @@ python med_chat.py
 ```shell
 # 激活虚拟环境
 conda activate day18
+# 安装matplotlib库
+pip install matplotlib -i https://pypi.mirrors.ustc.edu.cn/simple
 # 训练过程
 python med_train_trl.py
 # 数据集缓存在C:\Users\<用户名>/.cache/huggingface/datasets/ 
