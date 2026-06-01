@@ -213,3 +213,9 @@ __marimo__/
 /大模型应用与开发实验教程.docx
 /day02/images/*.bkp
 /day02/models
+/day21/data/val.json
+/day21/data/test.json
+/day21/data/train.json
+/day21/images
+/day21/models
+/day21/qwen3_kefu_sft_output
