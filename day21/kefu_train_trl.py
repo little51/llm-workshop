@@ -1,3 +1,4 @@
+from datasets import load_dataset
 from transformers import (
     AutoModelForCausalLM,
     AutoTokenizer,
@@ -8,7 +9,7 @@ from peft import (
     get_peft_model,
     TaskType,
 )
-from datasets import load_dataset
+
 import torch
 from trl import SFTTrainer
 
