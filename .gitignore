@@ -220,3 +220,5 @@ __marimo__/
 /day21/models
 /day21/qwen3_kefu_sft_output
 /day22/models
+/day22/train_qa.jsonl
+/day22/检索增强生成应用.pptx
