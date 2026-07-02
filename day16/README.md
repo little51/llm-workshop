@@ -11,6 +11,8 @@ conda create -n day16 python=3.13 -y
 conda activate day16
 # 安装依赖库
 pip install langflow==1.5.1 fastapi==0.116.1 docling-core[chunking]==2.54.0 -i https://pypi.mirrors.ustc.edu.cn/simple
+# 或者 
+pip install langflow==1.10.0 -i https://pypi.mirrors.ustc.edu.cn/simple
 ```
 
 ### 2、运行Langflow
